@@ -1,0 +1,43 @@
+<div class="flex">
+<mat-toolbar color="light">
+      <div class="col-4">
+        <a mat-icon-button>
+          <mat-icon  (click)="sidenav.toggle()">menu</mat-icon>
+          </a>
+      </div>
+      <div class="col-6">
+        <img alt="logo" src="assets/logo.png" width="80px" height="30px">
+      </div>
+      <div class="col-2" >
+        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+      </div>
+</mat-toolbar>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+      <div class="row">
+        <img alt="logo" src="assets/logo.png" width="150px" height="100px">
+      </div>
+      <hr>
+      <a mat-list-item > Request for book</a>
+      <hr>
+      <a mat-list-item > Profile </a>
+      <a mat-list-item > Address</a>
+      <a mat-list-item > Orders</a>
+      <hr>
+      <a mat-list-item > Coupons </a>
+      <a mat-list-item > Favorites</a>
+      <a mat-list-item href="" mat-list-item>Close</a>
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 88vh;">
+
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+</div>
+
+

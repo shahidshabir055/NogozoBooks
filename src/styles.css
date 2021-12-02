@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.discount-card{
+  height: fit-content;
+  border-radius: 10%;
+
+}
+.discard-first{
+  background: url(./assets/pic6.jpg);
+  background-repeat: no-repeat;
+  height: 400px;
+  background-size: cover;
+  border-radius: 5%;
+}
+
+.discard-second{
+  background: url(./assets/pic3.jpg);
+   background-repeat: no-repeat;
+   height: 400px;
+   background-size: cover;
+   border-radius: 5%;
+}
+.offer-one{
+width: 80px;
+height: 80px;
+margin: 10px;
+line-height: 80px;
+border-radius: 50%;
+font-size: 50px;
+background-color: brown;
+text-align: center;
+}
+.offer-second{
+width: 80px;
+height: 80px;
+margin: 10px;
+line-height: 80px;
+border-radius: 50%;
+font-size: 50px;
+background-color: blue;
+text-align: center;
+}

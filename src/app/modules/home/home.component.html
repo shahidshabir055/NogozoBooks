@@ -1,0 +1,87 @@
+<div class="main">
+  <div class="form-group has-search has-filter">
+    <span class="fa fa-search form-control-feedback"></span>
+    <input type="text" class="form-control" placeholder="Search Product">
+  </div>
+</div>
+<div class="bg-light" style="width: 100%;">
+  <ngb-carousel #carousel [interval]="2000" [pauseOnHover]="pauseOnHover" [pauseOnFocus]="pauseOnFocus"
+    (slide)="onSlide($event)">
+    <ng-template ngbSlide *ngFor="let img of images; index as i">
+      <mat-card class="border-raised rounded" style="height: 400px; width: 100%;">
+        <div class="carousel-caption">
+          <h3>My slide {{i + 1}} title</h3>
+        </div>
+        <div class="picsum-img-wrapper">
+          <img [src]="img" alt="My image {{i + 1}} description" class="card-img-top">
+        </div>
+      </mat-card>
+    </ng-template>
+  </ngb-carousel>
+</div>
+<br><br>
+<div class="flex justify-content-center">
+  <div class="row justify-content-center">
+    <div class="col-sm-5 col-md-2 col-xl-2 justify-content-center" *ngFor="let x of classesInNumber;let i=index">
+      <div class="card m-2 bg-info justify-content-center">
+        <div class="circle">
+          <div class="inner-circle">
+            <p class="circle-text">{{x}}</p>
+          </div>
+        </div>
+      </div>
+      <p style="margin-left: 20px; color: black; font-size: 20px;">{{classesInRoman[i]}}</p>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+    <div class="col-sm-5 col-md-2 col-xl-2 justify-content-center" *ngFor="let x of higherClasses;let i=index">
+      <div class="card m-2 bg-info justify-content-center">
+        <div class="circle">
+          <div class="inner-circle">
+            <p class="circle-text-second"><b>{{x}}</b></p>
+          </div>
+        </div>
+      </div>
+      <p style="margin-left: 20px; color: black; font-size: 20px;">{{higherClassesInRoman[i]}}</p>
+    </div>
+  </div>
+<div class="flex">
+  <div class="row justify-content-center m-1">
+    <div class="col-sm col-md-6 col-xl-6" >
+      <mat-card class=" discard-second">
+        <div  style="color: brown; font-size: 100px; margin-left: 30%; margin-top: 20%;">
+        <p style="font-size: 50px;"><b>NOVELS</b></p>
+        <h3 style="font-size: 50px; margin-top: 30px; margin-left: 7%;"><b>Under</b></h3>
+        <div class="row">
+          <div class="col-2 offer-one">
+            <p style="color: white;" >₹</p>
+          </div>
+          <div class="col-2">
+            <p style="margin-left: 5px; color: brown; margin-top: 35px"><b>99</b></p>
+          </div>
+        </div>
+      </div>
+      </mat-card>
+    </div>
+    <div class="col-sm col-md-6 col-xl-6  ">
+      <mat-card class="discard-second">
+        <div  style="color: blue; font-size: 100px; margin-left: 30%; margin-top: 20%;">
+        <p style="font-size: 50px;"><b>NOVELS</b></p>
+        <h3 style="font-size: 50px; margin-top: 30px; margin-left: 7%;"><b>Under</b></h3>
+        <div class="row">
+          <div class="col-2 offer-second">
+            <p style="color: white;" >₹</p>
+          </div>
+          <div class="col-2">
+            <p style="margin-left: 5px; color: blue; margin-top: 35px"><b>49</b></p>
+          </div>
+        </div>
+      </div>
+      </mat-card>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<app-featured-novels></app-featured-novels>
